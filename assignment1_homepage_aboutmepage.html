@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .header, .footer {
+      background-color: #2c3e50;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .footer {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .nav-tabs button {
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-tabs button:hover {
+      background-color: #2980b9;
+    }
+
+    .content {
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    .title {
+      font-size: 28px;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">My Project</h1>
+  </div>
+
+  <div class="nav-tabs">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('about')">About Me</button>
+  </div>
+
+  <div class="container">
+    <div id="home" class="content active">
+      <h2>Project Ideas</h2>
+      <p>Here are some exciting project ideas I'm working on:</p>
+      <ul>
+        <li>Project 1: A web application to display web mapping related assignments and answers.</li>
+        <li>Project 2: A mobile app to create questionnaires for bodaboda operators along JKUAT.</li>
+        <li>Project 3: An algorithm to show the quickest and shortest route to be taken by emergency respose teams incase of a fire incident.</li>
+        <li>Project 4: A machine learning model to investigate forest cover and biomass in coastal forests.</li>
+      </ul>
+    </div>
+
+    <div id="about" class="content">
+      <h2>About Me</h2>
+      <p>My name is Lewis Mugera Ng'ang'a. I am a student at JKUAT pursuing a Bachelors Degree in Geomatic Engineering and Geospatial Information Systems. I am currently in my 5th year of study. My registration number is ENC221-0076/2019.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 My Project</p>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      var pages = document.querySelectorAll('.content');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
